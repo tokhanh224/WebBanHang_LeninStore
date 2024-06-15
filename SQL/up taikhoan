@@ -1,0 +1,78 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 30, 2023 at 06:36 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `duan12023`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `taikhoan`
+--
+
+CREATE TABLE `taikhoan` (
+  `id_ac` int(11) NOT NULL,
+  `anh` varchar(100) NOT NULL DEFAULT 'hihi.jpg',
+  `user` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
+  `role` int(11) NOT NULL DEFAULT 0,
+  `id_quyen` int(11) NOT NULL DEFAULT 4,
+  `trang_thai` tinyint(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `taikhoan`
+--
+
+INSERT INTO `taikhoan` (`id_ac`, `anh`, `user`, `pass`, `email`, `address`, `tel`, `role`, `id_quyen`, `trang_thai`) VALUES
+(1, 'hihi.jpg', 'admin', '123456', 'admin@fpt.edu.vn', 'hanoi', '123', 1, 4, 1),
+(2, 'hihi.jpg', 'khanh', '123', 'tokhanh@fpt.edu.vn', 'hanoi', '123', 1, 4, 1),
+(3, 'hihi.jpg', 'hihi@gmail.com', 'hihi@gmail.com', 'hihi@gmail.com', NULL, NULL, 1, 4, 1),
+(4, 'hihi.jpg', 'k12', '123', 'K@12345', NULL, NULL, 0, 4, 1),
+(5, 'hihi.jpg', 'you@gmail.com', '123', 'you@gmail.com', NULL, NULL, 0, 4, 1),
+(6, 'hihi.jpg', 'ten', '123', 'ten@gmail.com', NULL, NULL, 0, 4, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `taikhoan`
+--
+ALTER TABLE `taikhoan`
+  ADD PRIMARY KEY (`id_ac`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `taikhoan`
+--
+ALTER TABLE `taikhoan`
+  MODIFY `id_ac` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

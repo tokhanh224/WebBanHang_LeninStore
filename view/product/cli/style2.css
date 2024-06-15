@@ -1,0 +1,64 @@
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hover-effect img {
+  transition: transform 0.5s;
+}
+
+.hover-effect:hover img {
+  transform: scale(1.2);
+}
+.product-card img {
+  transition: transform 0.5s;
+  display: block;
+}
+
+.product-card:hover img {
+  transform: scale(1.2);
+  /* opacity: 0.7; */
+}
+/* Định dạng chung cho .card-title và .card-text */
+.product-card .card-title,
+.product-card .card-text {
+  margin: 5px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Định dạng cho .card-title */
+.product-card .card-title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Định dạng cho .card-text */
+.product-card .card-text {
+  color: #555555; /* Màu sắc văn bản của .card-text */
+  text-align: left; /* Căn giữa theo chiều ngang */
+  display: flex; /* Sử dụng flex để căn giữa theo chiều ngang */
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* Hover hiệu ứng cho .card-title và .card-text */
+.product-card:hover .card-title,
+.product-card:hover .card-text {
+}
+.product-card .svg-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%) scale(0.8); /* Điều chỉnh tỉ lệ theo cần thiết */
+  height: 32px; /* Tăng chiều cao của SVG */
+  width: 36px; /* Tăng chiều rộng của SVG */
+  fill: #000000; /* Điều chỉnh màu fill nếu cần thiết */
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+}
